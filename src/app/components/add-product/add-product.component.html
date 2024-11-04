@@ -1,0 +1,26 @@
+<div>
+  <h2>Dodaj novi proizvod</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Ime:</label>
+    <input id="name" [(ngModel)]="name" name="name" required />
+
+    <label for="sku">SKU:</label>
+    <input id="sku" [(ngModel)]="sku" name="sku" required />
+
+    <label for="description">Description:</label>
+    <input
+      id="description"
+      [(ngModel)]="description"
+      name="description"
+      required
+    />
+
+    <label for="price">Cijena:</label>
+    <input id="price" type="number" [(ngModel)]="price" name="price" required />
+
+    <label for="stock">Zaliha:</label>
+    <input id="stock" type="number" [(ngModel)]="stock" name="stock" required />
+
+    <button type="submit">Dodaj proizvod</button>
+  </form>
+</div>

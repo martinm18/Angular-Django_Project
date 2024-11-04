@@ -1,0 +1,23 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <h3>{{ product.name }}</h3>
+  <p>SKU: {{ product.sku }}</p>
+  <p>Cijena: {{ product.price }}</p>
+  <p>Stock: {{ product.stock }}</p>
+</div>
+
+<!-- <table>
+  <tr>
+    <th>Name</th>
+    <th>SKU</th>
+    <th>Price</th>
+    <th>Stock</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{ product.name }}</td>
+    <td>SKU: {{ product.sku }}</td>
+    <td>Cijena: {{ product.price }}</td>
+    <td>Stock: {{ product.stock }}</td>
+  </tr>
+</table> -->

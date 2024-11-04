@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Registracija</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Korisničko ime</label>
+      <input id="username" formControlName="username" required />
+      <div *ngIf="submitted && f.username.errors" class="error">
+        <div *ngIf="f.username.errors.required">
+          Korisničko ime je obavezno.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="password">Lozinka</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        required
+      />
+      <div *ngIf="submitted && f.password.errors" class="error">
+        <div *ngIf="f.password.errors.required">Lozinka je obavezna.</div>
+        <div *ngIf="f.password.errors.minlength">
+          Lozinka mora imati barem 6 znakova.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="role">Uloga</label>
+      <select id="role" formControlName="role">
+        <option value="customer">Kupac</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+
+    <button type="submit">Registriraj se</button>
+
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </form>
+</div>

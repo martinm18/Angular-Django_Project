@@ -1,0 +1,26 @@
+<h2>Add Order</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="customer">Customer:</label>
+  <select id="customer" [(ngModel)]="order.customer" name="customer" required>
+    <option *ngFor="let customer of customers" [value]="customer.id">
+      {{ customer.name }}
+    </option>
+  </select>
+
+  <label for="status">Status:</label>
+  <select id="status" [(ngModel)]="order.status" name="status" required>
+    <option value="Pending">Pending</option>
+    <option value="Shipped">Shipped</option>
+    <option value="Delivered">Delivered</option>
+  </select>
+
+  <label for="date_created">Datum kreiranja:</label>
+  <input
+    id="date_created"
+    type="date"
+    [(ngModel)]="order.date_created"
+    name="date_created"
+  />
+
+  <button type="submit">Add Order</button>
+</form>

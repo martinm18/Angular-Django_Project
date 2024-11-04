@@ -1,0 +1,21 @@
+<div>
+  <h2>Dodaj novog kupca</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Ime:</label>
+    <input id="name" [(ngModel)]="customer.name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input
+      id="email"
+      type="email"
+      [(ngModel)]="customer.email"
+      name="email"
+      required
+    />
+
+    <label for="phone">Telefon:</label>
+    <input id="phone" [(ngModel)]="customer.phone" name="phone" required />
+
+    <button type="submit">Dodaj kupca</button>
+  </form>
+</div>
