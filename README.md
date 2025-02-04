@@ -1,0 +1,1 @@
+Angular + Python Django project.
